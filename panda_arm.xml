@@ -1,0 +1,29 @@
+<mujoco model="franka_panda_humanoid_challenge">
+    <compiler angle="radian" meshdir="assets" latitude="0" longitude="0"/>
+    <option timestep="0.002" gravity="0 0 -9.81"/>
+    
+    <worldbody>
+        <light pos="0 0 3" dir="0 0 -1"/>
+        <body name="base" pos="0 0 0">
+            <inertial pos="0 0 0.05" mass="4.0" diaginertia="0.4 0.4 0.4"/>
+            <geom type="cylinder" size="0.1 0.05" rgba="0.5 0.5 0.5 1"/>
+            
+            <!-- Joint 1 -->
+            <body name="link1" pos="0 0 0.333">
+                <joint name="joint1" axis="0 0 1" range="-2.8973 2.8973" limited="true"/>
+                <geom type="capsule" size="0.05 0.1" rgba="0.7 0.7 0.7 1"/>
+                
+                <!-- Joint 2 -->
+                <body name="link2" pos="0 0 0" quat="0.707107 -0.707107 0 0">
+                    <joint name="joint2" axis="0 0 1" range="-1.7628 1.7628" limited="true"/>
+                    <geom type="capsule" size="0.05 0.1" rgba="0.7 0.7 0.7 1"/>
+                </body>
+            </body>
+        </body>
+    </worldbody>
+
+    <actuator>
+        <motor joint="joint1" name="torq_j1" ctrlrange="-87 87" ctrllimited="true"/>
+        <motor joint="joint2" name="torq_j2" ctrlrange="-87 87" ctrllimited="true"/>
+    </actuator>
+</mujoco>
