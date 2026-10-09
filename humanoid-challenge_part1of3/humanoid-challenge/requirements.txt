@@ -1,0 +1,12 @@
+# Python 3.10 - 3.12 (mediapipe 0.10.14 has no 3.13 wheels)
+mujoco>=3.3
+mediapipe==0.10.14
+opencv-contrib-python>=4.8
+numpy>=1.26
+scipy>=1.11
+torch>=2.2
+matplotlib>=3.8
+pandas>=2.1
+tabulate
+imageio>=2.33
+imageio-ffmpeg
