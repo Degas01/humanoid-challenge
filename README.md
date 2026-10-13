@@ -9,7 +9,9 @@ physics, and runs **one closed-loop policy** that drives both bodies.
 
 Built for the humanoid challenge of the Robot Learning Research Internship.
 
-![phone | Panda | G1](outputs/side_by_side/demo_01.gif)
+<p align="center">
+  <img src="outputs/side_by_side/demo_01.gif" alt="phone | Panda | G1">
+</p>
 
 *Left: my phone clip with the tracked hand. Middle and right: the same demonstration replayed by the
 two robots, simulated at 500 Hz with torque-rate retargeting.*
